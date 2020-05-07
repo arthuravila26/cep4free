@@ -2,7 +2,7 @@ import logging
 
 
 logger = logging.getLogger("Cep4Free")
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 handler = logging.StreamHandler()
 handler.setLevel(logging.DEBUG)

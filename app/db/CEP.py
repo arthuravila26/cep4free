@@ -1,11 +1,10 @@
 from mongoengine import Document, StringField, queryset_manager
 
 class CEP(Document):
-    cep: StringField(required=True)
-    cidade: StringField(required=True)
-    uf: StringField(required=True)
-    bairro: StringField(required=True)
-    endereco: StringField(required=True)
+    cep = StringField(required=True)
+    cidade = StringField(required=True)
+    bairro = StringField(required=True)
+    endereco = StringField(required=True)
 
     def __init__(self, *args, **kwargs):
         super(Document, self).__init__(*args, **kwargs)

@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+from app.coordinator import Coordinator
 
-app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"cep": "01001000",	"cidade": "São Paulo", "uf": "SP", "bairro": "Sé", "endereço": "Praça da Sé - lado ímpar"}
+if __name__ == '__main__':
+    c = Coordinator()
+    c.run()

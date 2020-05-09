@@ -2,6 +2,7 @@ import mongoengine
 from app.utils.logger import logger
 from app.configs.mongo_configs import MongoConfigs
 
+
 class Mongo:
     def __init__(self):
         self.settings = MongoConfigs

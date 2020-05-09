@@ -1,13 +1,6 @@
 version: '3.2'
 
 services:
-#  collection:
-#    build: .
-#    env_file:
-#     - env.example
-#    depends_on:
-#     - mongo
-
   mongo:
     image: mongo
     restart: always

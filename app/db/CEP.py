@@ -1,5 +1,6 @@
 from mongoengine import Document, StringField, queryset_manager
 
+
 class CEP(Document):
     cep = StringField(required=True)
     cidade = StringField(required=True)

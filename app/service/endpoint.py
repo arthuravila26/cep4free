@@ -1,13 +1,16 @@
-import http
+import requests
+import mongoengine
+import json
 
 from fastapi import FastAPI
-
-from app.models.cep_validate import CepModel
+from app.db.CEP import CEP
 from app.utils.logger import logger
-from app.docs import *
+from app.db.load import Load
 
 app = FastAPI()
 
-@app.get('/{Cep}')
-def get_cep():
-    cep = CepModel()
+
+@app.get('/cep/{cep}')
+def find_ceps(cep):
+    ceps = CEP.objects.get(cep=cep).to_json()
+    return json.loads(ceps)

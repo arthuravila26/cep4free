@@ -1,6 +1,5 @@
-import json
-import os
 import csv
+import os
 import mongoengine
 
 from app.db.CEP import CEP
@@ -30,5 +29,7 @@ class Load:
                     c.bairro = cep[2]
                     c.endereco = cep[3]
                     c.save()
+
         else:
             logger.info('Os CEPs já foram inseridos na base de dados.')
+
